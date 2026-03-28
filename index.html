@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cansu Bebisime Yazı❤️</title>
-    <!-- Google Fonts: Zarif bir görünüm için -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@400;600&display=swap"
-        rel="stylesheet">
+    <title>ILOVEHER ❤️</title>
+   
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* Modern ve Romantik Arka Plan */
+        
         body {
             margin: 0;
             padding: 0;
@@ -24,22 +21,19 @@
             perspective: 1000px;
         }
 
-        /* Paylaştığın Kod: .heart Stilleri */
         .heart {
             position: absolute;
-            left: 50%;
-            top: 50%;
+            left: 50%; top: 50%;
             text-align: center;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); 
             transition: transform 2s;
             z-index: 10;
             cursor: pointer;
         }
 
-        /* Paylaştığın Kod: Animasyonlu Kalp Görseli */
-        .heart>img {
-            width: 80px;
-            /* Görselden biraz daha büyük yaptık daha iyi görünmesi için */
+       
+        .heart > img {
+            width: 80px; 
             height: auto;
             animation-name: beat;
             animation-duration: 2s;
@@ -49,33 +43,21 @@
             filter: drop-shadow(0 0 10px rgba(255, 60, 100, 0.4));
         }
 
-        /* Kalp Atış Animasyonu (Keyframes) */
+        
         @keyframes beat {
-            0% {
-                transform: scale(1);
-            }
-
-            30% {
-                transform: scale(1.1);
-            }
-
-            50% {
-                transform: scale(1.2);
-            }
-
-            100% {
-                transform: scale(1);
-            }
+            0% { transform: scale(1); }
+            30% { transform: scale(1.1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
         }
 
-        /* Tıklandığında Kalbin Büyüyüp Kaybolması */
+        
         .heart.open {
             transform: translate(-50%, -50%) scale(0);
             opacity: 0;
             pointer-events: none;
         }
-
-        /* Mesaj Kartı (Mektup) Yapısı */
+ 
         .card {
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(15px);
@@ -121,7 +103,6 @@
             text-align: right;
         }
 
-        /* Kalp Yağmuru Efekti */
         .falling-heart {
             position: absolute;
             color: #ff4d6d;
@@ -137,8 +118,7 @@
                 opacity: 0;
             }
         }
-
-        /* Küçük "Tıkla" Yazısı */
+ 
         .click-hint {
             position: absolute;
             bottom: -30px;
@@ -151,102 +131,44 @@
         }
 
         @keyframes fadeInOut {
-
-            0%,
-            100% {
-                opacity: 0.3;
-            }
-
-            50% {
-                opacity: 1;
-            }
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
         }
     </style>
-    <!-- YouTube Player (Hidden) -->
-    <!-- YouTube Player (Hidden) -->
-    <div id="youtube-player"
-        style="position: absolute; top: -100px; left: -100px; width: 1px; height: 1px; opacity: 0; pointer-events: none;">
-    </div>
 </head>
-
 <body>
 
-    <!-- Başlangıçtaki Kalp Butonu -->
+    <!-- Audio ekledim -->
+    <audio id="loveSong" src="duvet.mp3" preload="auto"></audio>
+
     <div class="heart" id="heartBtn" onclick="revealMessage()">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff3860'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E"
-            alt="Heart">
+        
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff3860'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E" alt="Heart">
         <div class="click-hint">Kalbi açmak için dokun...</div>
     </div>
 
-    <!-- Mesaj Kartı -->
     <div class="card" id="loveCard">
-        <h1>Benden bebisime bir nott... ❤️</h1>
+        <h1>Sana yazı yazdım askımm ❤️</h1>
         <p>
-            askim bebegim her gece seni dusunmekten uyuyamiyorum kalbim hicbir zaman durmuyor ve senin adini fısıldiyor sanki sen buradasin gibi icimdeki bosluk kayboluyor senin varligin bana guc veriyor ve her seyi daha katlanilir yapiyor hic bir kelime yetmez belki ama bilmeni isterim sen benim her seyimsin ve her an seni dusunmek bana hayatta en guzel hisleri veriyor...
-            
+            Askim bebegim her gece seni dusunmekten uyuyamiyorum kalbim hicbir zaman durmuyor ve senin adini fısıldiyor sanki sen buradasin gibi icimdeki bosluk kayboluyor senin varligin bana guc veriyor ve her seyi daha katlanilir yapiyor hic bir kelime yetmez belki ama bilmeni isterim sen benim her seyimsin ve her an seni dusunmek bana hayatta en guzel hisleri veriyor... 
             <br><br>
             her sabah uyandigimda aklim ilk senin uzerinde askim bebegim sanki gozlerimi acar acmaz senin gulumsemeni dusunuyorum icimde huzur ve mutluluk doluyor senin sesin bile beni rahatlatiyor ve dunyanin agirligi bir anda kayboluyor seninle gecirecegimiz gunleri dusunmek bile heyecan veriyor ve bilmeni isterim ki her anim senin icin daha guzel olsun diye dusunerek geciyor...
-            
             <br><br>
-            gece sessizliginde aklim hep seninle askim bebegim kalbim durmadan adini fısıldiyor ve seni dusunmekten kendimi alamiyorum her an icimde sicak bir his beliriyor sen gulunce dunya daha parlak ve katlanilir oluyor seninle olmak her seyi anlamli kiliyor ve ben o anlami hic bir zaman kaybetmek istemiyorum belki yan yana degiliz ama kalbim hep seninle ve bu hissi her zaman yasamak istiyorum... SENI COK SEVIYORUM
-            
+            gece sessizliginde aklim hep seninle askim bebegim kalbim durmadan adini fısıldiyor ve seni dusunmekten kendimi alamiyorum her an icimde sicak bir his beliriyor sen gulunce dunya daha parlak ve katlanilir oluyor seninle olmak her seyi anlamli kiliyor ve ben o anlami hic bir zaman kaybetmek istemiyorum belki yan yana degiliz ama kalbim hep seninle ve bu hissi her zaman yasamak istiyorum...
         </p>
-        <div class="signature">SONSUZ SEVGILERIMLEEE BEBISIMMM <33...</div>
+        <div class="signature">Sonsuz sevgilerimle <33...</div>
     </div>
-
-    <!-- YouTube API Script -->
-    <script>
-        var player;
-        var videoId = 'o7fgFaXKVa0'; // Buraya istediğin YouTube Linkindeki ID'yi yazabilirsin
-
-        function onYouTubeIframeAPIReady() {
-            console.log("YouTube API Ready");
-            player = new YT.Player('youtube-player', {
-                height: '1',
-                width: '1',
-                videoId: videoId,
-                playerVars: {
-                    'autoplay': 0,
-                    'controls': 0,
-                    'loop': 1,
-                    'playlist': videoId,
-                    'enablejsapi': 1,
-                    'origin': window.location.origin || '*'
-                },
-                events: {
-                    'onReady': function (event) {
-                        console.log("Player Ready");
-                    },
-                    'onError': function (event) {
-                        console.error("YouTube Player Error:", event.data);
-                    }
-                }
-            });
-        }
-
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    </script>
 
     <script>
         function revealMessage() {
             const heartBtn = document.getElementById('heartBtn');
             const card = document.getElementById('loveCard');
 
-            // Kalbi kapat
             heartBtn.classList.add('open');
 
-            // Müziği başlat
-            if (player && player.playVideo) {
-                console.log("Playing video...");
-                player.playVideo();
-            } else {
-                console.warn("Player not ready yet.");
-            }
+            // Şarkıyı çal
+            document.getElementById('loveSong').play();
 
-            // Mesajı göster
             setTimeout(() => {
                 card.classList.add('active');
                 startHeartRain();
@@ -262,7 +184,7 @@
                 heart.style.animationDuration = Math.random() * 3 + 2 + 's';
                 heart.style.opacity = Math.random();
                 heart.style.fontSize = Math.random() * 20 + 10 + 'px';
-
+                
                 document.body.appendChild(heart);
 
                 setTimeout(() => {
@@ -272,5 +194,4 @@
         }
     </script>
 </body>
-
 </html>
